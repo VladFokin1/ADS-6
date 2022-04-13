@@ -2,6 +2,10 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
+struct SYM {
+  char ch;
+  int prior;
+};
 
 template<class T, int size>
 class TQueue {
@@ -26,9 +30,6 @@ class TQueue {
            return arr[--count];
      }
 };
-struct SYM {
-  char ch;
-  int prior;
-};
+
 
 #endif  // INCLUDE_TPQUEUE_H_

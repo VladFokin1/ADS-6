@@ -2,11 +2,31 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
-template<typename T, int size>
-class TPQueue {
-  // реализация шаблона очереди с приоритетом на кольцевом буфере
-};
 
+template<class T, int size>
+class TQueue
+{
+   private:
+     struct SYM arr[size];
+     int count = 0;
+   public:
+     void push(SYM x) {
+         if (count < size) {
+             for (int i = count++; i >= 0; i--) {
+                 if (x.prior <= arr[i - 1].prior && i > 0) {
+                     arr[i] = arr[i - 1];
+                 } else {
+                     arr[i] = x;
+                     break;
+                 } 
+             }
+         }
+     }
+     SYM pop() {
+       if (count > 0)
+           return arr[--count];
+     }
+};
 struct SYM {
   char ch;
   int prior;

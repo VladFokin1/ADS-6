@@ -8,7 +8,7 @@ struct SYM {
 };
 
 template<class T, int size>
-class TQueue {
+class TPQueue {
  private:
      struct SYM arr[size];
      int count = 0;

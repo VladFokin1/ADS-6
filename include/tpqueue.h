@@ -4,12 +4,11 @@
 
 
 template<class T, int size>
-class TQueue
-{
-   private:
+class TQueue {
+ private:
      struct SYM arr[size];
      int count = 0;
-   public:
+ public:
      void push(SYM x) {
          if (count < size) {
              for (int i = count++; i >= 0; i--) {
@@ -18,7 +17,7 @@ class TQueue
                  } else {
                      arr[i] = x;
                      break;
-                 } 
+                 }
              }
          }
      }

@@ -26,8 +26,11 @@ class TPQueue {
          }
      }
      SYM pop() {
-       if (count > 0)
+       if (count > 0) {
            return arr[--count];
+       } else {
+           throw "ERROR!!!"
+       }
      }
 };
 

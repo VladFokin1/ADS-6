@@ -29,7 +29,7 @@ class TPQueue {
        if (count > 0) {
            return arr[--count];
        } else {
-           throw "ERROR!!!"
+           throw "ERROR!!!";
        }
      }
 };
